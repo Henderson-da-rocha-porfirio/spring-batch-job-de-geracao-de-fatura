@@ -14,7 +14,8 @@ import com.springbatch.faturacartaocredito.dominio.Transacao;
 import com.springbatch.faturacartaocredito.reader.FaturaCartaoCreditoReader;
 import com.springbatch.faturacartaocredito.writer.TotalTransacoesFooterCallback;
 
-/* chunk(1) = liberacao de 1 arquivo por cliente. Ou seja, cada fatura terá apenas um cliente.
+/* - Passos responsáveis pelas transiçoes
+*  chunk(1) = liberacao de 1 arquivo por cliente. Ou seja, cada fatura terá apenas um cliente.
 *  JDBC Item Reader = componente para ler dados do banco de dados. Possuem dois tipos:
 *  1. tipo cursor (usado aqui devido a simplicidade)
 *  2. tipo leitura paginada
