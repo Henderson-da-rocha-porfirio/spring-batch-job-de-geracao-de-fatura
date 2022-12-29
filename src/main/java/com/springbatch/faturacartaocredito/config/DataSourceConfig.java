@@ -8,6 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+/*
+*
+* Classe responsável pela configuração do data source
+*
+**/
 @Configuration
 public class DataSourceConfig {
 	@Primary
