@@ -41,3 +41,7 @@ alterações dela na sua branch.
 
 #### III - Observacoes
 > Nenhuma das opções sobrescreve código. Isso serve apenas para a 'adição' e/ou 'remoção' de alterações. A única possibilidade de sobrescrever é se mudar numa classe que seja a mesma em todas as branches. Daí é preciso resolver os conflitos.
+
+
+## REBASE pelo intellij
+> Faz processo semelhante ao MERGE, contudo, ele aplica as alterações do tipo "onto"(no) na branch que deseja sobrescrever ou alterar integralmente.
