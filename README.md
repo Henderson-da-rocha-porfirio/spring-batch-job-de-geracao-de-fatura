@@ -44,4 +44,4 @@ alterações dela na sua branch.
 
 
 ## REBASE pelo intellij
-> Faz processo semelhante ao MERGE, contudo, ele aplica as alterações do tipo "onto"(no) na branch que deseja sobrescrever ou alterar integralmente.
+> Ele puxa as alterações na integra da branch que desejo que faça o processo 'onto' na minha.
