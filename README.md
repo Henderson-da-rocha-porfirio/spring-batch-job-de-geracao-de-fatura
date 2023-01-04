@@ -1,6 +1,4 @@
-# Job de Geração de faturas de cartão de crédito TESTE 2
-
-teste
+# Job de Geração de faturas de cartão de crédito
 
 teste
 
