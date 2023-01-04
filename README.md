@@ -37,3 +37,7 @@ alterações dela na sua branch.
 > 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
 >
 > 5 _ Se der conflito, aceitar ou negar em sua branch.
+
+
+#### III - Observacoes
+> Nenhuma das opções sobrescreve código. Isso serve apenas para a 'adição' e/ou 'remoção' de alterações. A única possibilidade de sobrescrever é se mudar numa classe que seja a mesma em todas as branches. Daí é preciso resolver os conflitos.
