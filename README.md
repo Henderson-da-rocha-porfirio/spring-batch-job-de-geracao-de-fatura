@@ -11,3 +11,6 @@ na implementação de sistemas batch.
 > 3. Para a realização do teste, remover os arquivos fatura.txt que estao na pasta files e criar as tabelas no banco de dados e as suas inserções.
 >
 > 4. Para a criação de um serviço Rest para testes, ver informações [aqui](https://github.com/Henderson-da-rocha-porfirio/servico-teste-clientes-json)
+>
+> Merge no intellij => 
+> 
