@@ -1,5 +1,7 @@
 # Job de Geração de faturas de cartão de crédito
 
+teste
+
 > 1. Implementação com Spring Batch que faz:
 > - A leitura no banco de dados com o padrão delegate
 > - O processamento acessando um serviço REST
