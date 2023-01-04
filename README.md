@@ -25,7 +25,7 @@ as minhas alterações nela.
 
 
 
-#### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch )
+#### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
 
 > 1 _ faz checkout na sua mesma.
 >
@@ -35,3 +35,5 @@ alterações dela na sua branch.
 > 3 _ Faz um Push para enviar para o github (ou gitlab)
 >
 > 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
+>
+> 5 _ Se der conflito, aceitar ou negar em sua branch.
