@@ -1,6 +1,4 @@
-# Job de Geração de faturas de cartão de crédito TESTE 2
-
-teste
+# Job de Geração de faturas de cartão de crédito
 
 > 1. Implementação com Spring Batch que faz:
 > - A leitura no banco de dados com o padrão delegate
@@ -13,3 +11,6 @@ na implementação de sistemas batch.
 > 3. Para a realização do teste, remover os arquivos fatura.txt que estao na pasta files e criar as tabelas no banco de dados e as suas inserções.
 >
 > 4. Para a criação de um serviço Rest para testes, ver informações [aqui](https://github.com/Henderson-da-rocha-porfirio/servico-teste-clientes-json)
+>
+> Merge no intellij => 
+> 
