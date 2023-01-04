@@ -25,7 +25,7 @@ as minhas alterações nela.
 
 
 
-#### II - Merge Onto ( aceitar as alterações "da outra" branch "no" que fiz sobrescrevendo ou não a minha branch )
+#### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch )
 
 > 1 _ faz checkout na sua mesma.
 >
