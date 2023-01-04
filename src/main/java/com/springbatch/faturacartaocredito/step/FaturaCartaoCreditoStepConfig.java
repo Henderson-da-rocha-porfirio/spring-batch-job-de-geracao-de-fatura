@@ -1,18 +1,12 @@
 package com.springbatch.faturacartaocredito.step;
 
-import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.item.ItemProcessor;
-import org.springframework.batch.item.ItemStreamReader;
-import org.springframework.batch.item.ItemWriter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-import com.springbatch.faturacartaocredito.dominio.FaturaCartaoCredito;
-import com.springbatch.faturacartaocredito.dominio.Transacao;
-import com.springbatch.faturacartaocredito.reader.FaturaCartaoCreditoReader;
-import com.springbatch.faturacartaocredito.writer.TotalTransacoesFooterCallback;
+import com.springbatch.faturacartaocredito.dominio.*;
+import com.springbatch.faturacartaocredito.reader.*;
+import org.springframework.batch.core.*;
+import org.springframework.batch.core.configuration.annotation.*;
+import org.springframework.batch.item.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.context.annotation.*;
 
 /* - Passos responsáveis pelas transiçoes
 *  chunk(1) = liberacao de 1 arquivo por cliente. Ou seja, cada fatura terá apenas um cliente.
