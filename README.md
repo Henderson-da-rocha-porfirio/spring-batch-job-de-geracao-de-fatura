@@ -12,26 +12,26 @@ na implementação de sistemas batch.
 >
 > 4. Para a criação de um serviço Rest para testes, ver informações [aqui](https://github.com/Henderson-da-rocha-porfirio/servico-teste-clientes-json)
 > 
-> MERGE
+## MERGE pelo intellij
 
-I - Merge Into (envio de alterações que fiz para outra branch principal)
+#### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
 
-1 _ faz checkout na que deseja enviar as mudanças
+> 1 _ faz checkout na que deseja enviar as mudanças
+>
+> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que deseja jogar as
+as minhas alterações nela.
+>
+> 3 _ Por último, faz um Push para enviar para o github (ou gitlab)
 
-2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que deseja jogar as
-as suas alterações nela.
-
-3 _ Faz um Push para enviar para o github (ou gitlab)
 
 
+#### II - Merge Onto ( aceitar as alterações "da outra" branch "no" que fiz sobrescrevendo ou não a minha branch )
 
-II - Merge Onto (envio de alterações que fiz para outra branch)
-
-1 _ 1 _ faz checkout na sua mesma.
-
-2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que vai jogar as
+> 1 _ faz checkout na sua mesma.
+>
+> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que vai jogar as
 alterações dela na sua branch.
-
-3 _ Faz um Push para enviar para o github (ou gitlab)
-
-4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
+>
+> 3 _ Faz um Push para enviar para o github (ou gitlab)
+>
+> 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
