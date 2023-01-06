@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/* .start = é um step
+/* start = é um step
 *  step = ele é configurado em FaturaCartaoCreditoStepConfig*/
 
 @EnableBatchProcessing

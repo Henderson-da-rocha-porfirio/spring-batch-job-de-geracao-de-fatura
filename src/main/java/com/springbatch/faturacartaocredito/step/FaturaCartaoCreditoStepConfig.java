@@ -30,7 +30,9 @@ import com.springbatch.faturacartaocredito.writer.TotalTransacoesFooterCallback;
 *  7. .processor = responsável em buscar os dados do cliente. Neste cenário de negócio, a base de dados possui
 * apenas um identificador do cliente, os seus dados pessoais estão em outro sistema.
 *  8. Necessário criar um processador, por ex: CarregarDadosClienteProcessor
-*  9. TotalTransacoesFooterCallback e .listener = diz respeito a construcao do cabeçalho. */
+*  9. TotalTransacoesFooterCallback e .listener = diz respeito a construcao do cabeçalho.
+*  10. <FaturaCartaoCredito, FaturaCartaoCredito> =  Ele ler o FaturaCartaoCredito e retornar
+* para a escrita a FaturaCartaoCredito. */
 
 @Configuration
 public class FaturaCartaoCreditoStepConfig {
