@@ -9,8 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/* start = é um step
-*  step = ele é configurado em FaturaCartaoCreditoStepConfig*/
+/* start = é a ativação de um step no job.
+*  step = é o step configurado em FaturaCartaoCreditoStepConfig
+*  1. @ComponentScan: scaneia todos os beans dentro dos outros pacotes.
+*  2. @EnableBatchProcessing: Ative os recursos do Spring Batch e forneça
+* uma configuração básica para configurar trabalhos em lote em uma classe
+* @Configuration, aproximadamente equivalente ao uso do
+* <batch:*>namespace XML. Geralmente utilizado na classe de configuração do Job.
+* Mas neste caso aqui, foi usado no main mostrando outra possibilidade de uso.
+*/
 
 @EnableBatchProcessing
 @Configuration
