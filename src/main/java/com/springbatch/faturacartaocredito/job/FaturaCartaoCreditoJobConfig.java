@@ -15,8 +15,7 @@ import org.springframework.context.annotation.Configuration;
 *  2. @EnableBatchProcessing: Ative os recursos do Spring Batch e forneça
 * uma configuração básica para configurar trabalhos em lote em uma classe
 * @Configuration, aproximadamente equivalente ao uso do
-* <batch:*>namespace XML. Geralmente utilizado na classe de configuração do Job.
-* Mas neste caso aqui, foi usado no main mostrando outra possibilidade de uso.
+* <batch:*>namespace XML. Também pode ser utilizado na classe Main.
 */
 
 @EnableBatchProcessing
