@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.springbatch</groupId>
-	<artifactId>BATCH.fatura-cartao</artifactId>
+	<artifactId>fatura-cartao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>fatura-cartao</name>
 	<description>Job que gera faturas de cartão de crédito.</description>
