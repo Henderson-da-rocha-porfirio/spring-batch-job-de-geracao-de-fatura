@@ -16,9 +16,9 @@ na implementação de sistemas batch.
 
 #### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
 
-> 1 _ faz checkout na que deseja enviar as mudanças. ex. quer jogar da develop para a master. Faz checkout na master primeiro.
+> 1 _ faz checkout na que deseja enviar as mudanças. Ex: quer jogar da develop(sua branch) para a master(branch principal). Faz checkout na master primeiro.
 >
-> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
+> 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
 >
 > 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
 
@@ -26,10 +26,9 @@ na implementação de sistemas batch.
 
 #### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
 
-> 1 _ faz checkout na sua mesma.
+> 1 _ A sua branch deve estar selecionada. Caso contrário, faça um checkout na sua. Ex: quer jogar da master(branch principal) para develop(sua branch). 
 >
-> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que vai jogar as
-alterações dela na sua branch.
+> 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que servirá de update para a sua. Ex: baseando no contexto aqui do exemplo, a master, já que hipoteticamente a sua seria a develop.
 >
 > 3 _ Faz um Push para enviar para o github (ou gitlab)
 >
