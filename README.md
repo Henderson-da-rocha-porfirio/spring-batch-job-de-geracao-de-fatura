@@ -16,12 +16,11 @@ na implementação de sistemas batch.
 
 #### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
 
-> 1 _ faz checkout na que deseja enviar as mudanças
+> 1 _ faz checkout na que deseja enviar as mudanças. ex. quer jogar da develop para a master. Faz checkout na master primeiro.
 >
-> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que deseja jogar as
-as minhas alterações nela.
+> 2 _ menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
 >
-> 3 _ Por último, faz um Push para enviar para o github (ou gitlab)
+> 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
 
 
 
