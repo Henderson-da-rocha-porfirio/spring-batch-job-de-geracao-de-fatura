@@ -18,7 +18,7 @@ na implementação de sistemas batch.
 
 > 1 _ faz checkout na que deseja enviar as mudanças. Ex: quer jogar da develop(sua branch) para a master(branch principal). Faz checkout na master primeiro.
 >
-> 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
+> 2 _ Menu Git -> escolhe Merge -> Em Merge into master -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
 >
 > 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
 
