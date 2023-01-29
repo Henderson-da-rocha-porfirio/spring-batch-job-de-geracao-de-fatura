@@ -29,7 +29,9 @@ na implementação de sistemas batch.
 > 1 _ A sua branch deve estar selecionada. Caso contrário, faça um checkout na sua. Ex: quer jogar da master(branch principal) para develop(sua branch). 
 >
 > 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que servirá de update para a sua. Ex: baseando no contexto aqui do exemplo, a master, já que hipoteticamente a sua seria a develop.
->
+
+![merge onto](https://user-images.githubusercontent.com/46926951/215346418-4d310ee1-9042-451d-a0a8-45001de8efec.png)
+
 > 3 _ Faz um Push para enviar para o github (ou gitlab)
 >
 > 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
