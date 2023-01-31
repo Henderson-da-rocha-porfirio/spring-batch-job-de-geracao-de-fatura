@@ -18,10 +18,11 @@ na implementação de sistemas batch.
 
 > 1 _ faz checkout na que deseja enviar as mudanças. Ex: quer jogar da develop(sua branch) para a master(branch principal). Faz checkout na master primeiro.
 >
-> 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
->
-> 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
+> 2 _ Menu Git -> escolhe Merge -> Em Merge into master -> selecionar a branch de origem onde foram feitas alteracoes para jogar na que fez o checkout. Ex: escolha a develop.
 
+![merge into](https://user-images.githubusercontent.com/46926951/215347045-cef91299-ddfe-40c2-bc91-91581ccc156f.png)
+
+> 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
 
 
 #### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
@@ -29,7 +30,9 @@ na implementação de sistemas batch.
 > 1 _ A sua branch deve estar selecionada. Caso contrário, faça um checkout na sua. Ex: quer jogar da master(branch principal) para develop(sua branch). 
 >
 > 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que servirá de update para a sua. Ex: baseando no contexto aqui do exemplo, a master, já que hipoteticamente a sua seria a develop.
->
+
+![merge onto](https://user-images.githubusercontent.com/46926951/215346418-4d310ee1-9042-451d-a0a8-45001de8efec.png)
+
 > 3 _ Faz um Push para enviar para o github (ou gitlab)
 >
 > 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
