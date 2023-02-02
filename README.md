@@ -14,6 +14,9 @@ na implementação de sistemas batch.
 > 
 ## MERGE pelo intellij
 
+## solicitar merge pelo gitlab:
+> 1. colocar wip = word in progress no nome do MR(merge request)
+
 #### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
 
 > 1 _ faz checkout na que deseja enviar as mudanças. Ex: quer jogar da develop(sua branch) para a master(branch principal). Faz checkout na master primeiro.
