@@ -1,0 +1,22 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    show-sql: true
+  datasource
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_batch
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+#
+#    url: jdbc:postgresql://localhost:5432/fatura_cartao_credito
+#    username: postgres
+#    password: password
+#    driver-class-name: org.postgresql.Driver
+
+  batch:
+
+    jdbc:
+      initialize-schema: always
