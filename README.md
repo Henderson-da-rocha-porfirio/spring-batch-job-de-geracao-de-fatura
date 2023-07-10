@@ -27,6 +27,17 @@ na implementação de sistemas batch.
 
 > 3 _ Por último, faz um Push para enviar para o github (ou gitlab) para realmente modificar o que deseja.
 
+> 4 _ Realizar por comando:
+
+a. checkout:
+````
+git checkout develop (a outra branch)
+````
+
+b. merge:
+````
+git merge develop (sua branch)
+````
 
 #### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
 
@@ -41,6 +52,18 @@ na implementação de sistemas batch.
 > 4 _ Apenas este processo é que dá a mensagem de Merged tanto no github/gitlab ou no intellij.
 >
 > 5 _ Se der conflito, aceitar ou negar em sua branch.
+>
+> 6. _ Realizar por comando:
+
+a. checkout:
+````
+git checkout example (sua branch)
+````
+
+b. merge:
+````
+git merge develop (a outra branch)
+````
 
 
 #### III - Observacoes
