@@ -40,7 +40,7 @@ b. merge:
 git merge develop (sua branch)
 ````
 
-#### II - Backup e Pull de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
+#### II - Backup, Pull e Merge Request de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
 
 > Passo 1: Backup da sua branch atual:
 >
