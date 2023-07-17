@@ -14,10 +14,11 @@ na implementação de sistemas batch.
 > 
 ## MERGE pelo intellij
 
-## solicitar merge pelo gitlab:
-> 1. colocar wip = word in progress no nome do MR(merge request)
+## Usando o Gitlab:
 
 #### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
+
+***** Interessante fazer um backup antes(tem que estar na branch a qual vai fazer o backup): `git checkout -b backup_minha_branch`
 
 > 1 _ faz checkout na que deseja enviar as mudanças. Ex: quer jogar da develop(sua branch) para a master(branch principal). Faz checkout na master primeiro.
 >
@@ -39,9 +40,123 @@ b. merge:
 git merge develop (sua branch)
 ````
 
-#### II - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
+#### II - Backup e Pull de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
 
-> 1 _ A sua branch deve estar selecionada. Caso contrário, faça um checkout na sua. Ex: quer jogar da master(branch principal) para develop(sua branch). 
+> Passo 1: Backup da sua branch atual:
+>
+> Verifique em qual branch você está atualmente com o comando:
+
+`git branch`
+> 
+> O branch no qual você está será indicado por um asterisco. Supondo que você esteja no branch minha_branch, vamos fazer uma cópia dela:
+
+`git checkout -b backup_minha_branch`
+>
+> Este comando cria um novo branch chamado backup_minha_branch que é uma cópia do branch atual minha_branch.
+>
+> Passo 2: Atualizando a sua branch original
+> Agora, você deve voltar para a sua branch original e atualizá-la com as alterações da branch develop dando os comandos em sequência:
+
+1. `git checkout minha_branch`
+2. `git pull origin develop`
+
+- Estes comandos fazem o seguinte:
+
+- `git checkout minha_branch`: muda para a branch minha_branch.
+- `git pull origin develop`: busca as atualizações do branch develop e integra com o branch minha_branch.
+
+> Passo 3: Subindo as alterações para a sua branch remota
+
+- Agora que a sua branch `minha_branch` está atualizada, você pode subir as alterações para a branch remota.
+
+`git push origin minha_branch`
+
+> Passo 4: Fazendo um Merge Request (GitLab. Verificar algo parecido no Github):
+- *** Para criar um Merge Request no GitLab, siga os passos abaixo:
+
+> a. Faça login na sua conta do GitLab e navegue até o projeto específico no qual você deseja criar um Merge Request.
+
+> b. No menu à esquerda, clique em "Merge Requests".
+
+> c. Em seguida, clique no botão "New merge request".
+
+> d. Agora você precisará selecionar o branch de origem (sua branch com as alterações) e o branch de destino (geralmente, a branch `main` ou 
+`develop`, dependendo do seu fluxo de trabalho).
+
+> e. No campo `Source branch`, escolha sua branch (a branch onde você fez as alterações).
+
+> f. No campo `Target branch`, escolha a branch para a qual deseja mesclar as alterações (geralmente, `main` ou `develop`).
+
+> g. Após selecionar os branches, clique em `Compare branches and continue`.
+
+> h. Na próxima página, forneça um título e uma descrição para o seu `Merge Request`. Isso deve incluir detalhes sobre as alterações que você fez.
+
+> i. Se você quiser que alguém específico revise seu Merge Request, você pode atribuí-lo a essa pessoa na seção `Assignees`.
+
+> j. Se desejar, você também pode adicionar `rótulos` para ajudar a categorizar seu Merge Request na seção `Labels`.
+
+> k. Quando estiver satisfeito com todas as informações fornecidas, clique em `Submit merge request`.
+
+> l. E é isso! Agora você criou um Merge Request no GitLab. Lembre-se, uma vez que o Merge Request é criado, os revisores podem solicitar alterações antes de aprová-lo para ser mesclado. Você pode fazer essas alterações diretamente no branch de origem e elas serão automaticamente refletidas no Merge Request.
+
+> m. O `Merge Request` é uma solicitação para mesclar seu branch de trabalho (`branch de origem`) com outro branch, normalmente a branch principal ou de desenvolvimento (`branch de destino`). Enquanto o Merge Request estiver aberto, qualquer commit adicional que você fizer no branch de origem será automaticamente refletido nesse Merge Request. Isso significa que, se os revisores pedirem alterações durante o processo de revisão do código, você pode fazer essas alterações diretamente no seu branch de origem. Após `commitar` e fazer `push` dessas alterações para o seu branch de origem, elas serão automaticamente atualizadas no Merge Request existente. Esses commits adicionais não serão refletidos no branch de destino (como `develop`) até que o Merge Request seja aprovado e o merge seja realizado. Em outras palavras, os commits adicionais não afetam o branch de destino até que o Merge Request seja concluído.
+
+- `WIP`: Work in Progress (WIP) em um Merge Request no GitLab para prevenir que o Merge Request seja mesclado antes de estar pronto. Isso é especialmente útil quando você ainda está trabalhando em uma `feature` ou quando espera feedback de outros.
+- 1. Na página do Merge Request, clique no botão "Edit" próximo ao título do Merge Request.
+- 2. Adicione `"WIP`:" ou `"Draft: "` ao início do título do Merge Request e depois clique em `"Save changes"`.
+- 3. Por exemplo, se o título do seu Merge Request era `"Adicionar nova funcionalidade"`, você mudaria para:
+  ````
+   "WIP: Adicionar nova funcionalidade" ou "Draft: Adicionar nova funcionalidade".
+  ````
+- 4. Após fazer isso, o botão "Merge" ficará desabilitado no Merge Request e ninguém poderá mesclar as alterações até que você remova o "WIP: " ou "Draft: " do título.
+- 5. Para remover o status de `Work in Progress` e permitir a mesclagem:
+
+> a. Na página do `Merge Request`, clique no botão `"Edit"` próximo ao título do Merge Request.
+> 
+> b. Remova `"WIP: "` ou `"Draft: "` do início do título e clique em `"Save changes"`.
+> 
+> c. Agora o botão `"Merge"` estará habilitado novamente e outros poderão mesclar suas alterações.
+
+Lembre-se de que, mesmo quando um Merge Request está definido como Work in Progress, quaisquer novos commits que você fizer no branch de origem ainda serão refletidos nesse Merge Request. O status de Work in Progress apenas impede que o Merge Request seja mesclado prematuramente.
+
+> Passo 5: Resolver conflitos de Merge e Pull: 
+
+- Exemplo de como o conflito é mostrado no código e de como resolver :
+
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/a4041dac-be4f-41b6-abd1-50f0b8b84b97)
+
+- `HEAD`: Manter o código da sua branch: `<<<<<<< HEAD`:
+  
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/f010db0c-59c4-4fc9-a92f-0858347d3e9f)
+
+
+- `=======`: Divisão entre o seu código e o da outra branch ( ver a imagem do exemplo como fica ).
+
+- `725ae55a005d6146aa3a28cf48b54d4bc7b5f350`: Manter o código da outra branch (cujo último commit é 725ae55a005d6146aa3a28cf48b54d4bc7b5f350): `>>>>>>> 725ae55a005d6146aa3a28cf48b54d4bc7b5f350`:
+  
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/d8775f4e-9c91-48b1-902d-c09defdadae0)
+
+- Manter ambas as linhas de código, ou seja:
+
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/a505b203-6480-456b-9b68-9cad8d3b570e)
+
+
+- Depois de decidir qual código manter, remova as linhas de conflito `<<<<<<< HEAD`, `=======`, `>>>>>>> 725ae55a005d6146aa3a28cf48b54d4bc7b5f350` e salve o arquivo.
+
+- Após salvar o arquivo, você precisa adicionar esse arquivo ao `Git` para indicar que o conflito foi resolvido ( arquivo de exemplo: `application-default.yml` ):
+- a. `git add src/main/resources/application-default.yml`
+- b. `git commit -m "Conflito resolvido em application-default.yml"`
+  
+
+
+
+
+
+#### III - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
+
+***** Interessante fazer um backup antes(tem que estar na branch a qual vai fazer o backup):`git checkout -b backup_minha_branch`
+
+> 1 _ Dê uma olhada se precisa fazer uma merge ou apenas uma atualização seja suficiente. Verifique o tópico acima. Seguindo, a sua branch deve estar selecionada. Caso contrário, faça um checkout na sua. Ex: quer jogar da master(branch principal) para develop(sua branch). 
 >
 > 2 _ Menu Git -> escolhe Merge -> Em Merge into develop -> selecionar a branch que servirá de update para a sua. Ex: baseando no contexto aqui do exemplo, a master, já que hipoteticamente a sua seria a develop.
 
