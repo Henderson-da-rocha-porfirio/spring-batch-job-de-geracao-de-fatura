@@ -42,19 +42,19 @@ git merge develop (sua branch)
 
 #### II - Backup, Pull e Merge Request de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
 
-> Passo 1: Backup da sua branch atual:
+- Passo 1: Backup da sua branch atual:
 >
-> Verifique em qual branch você está atualmente com o comando:
+- Verifique em qual branch você está atualmente com o comando:
 
 `git branch`
 > 
-> O branch no qual você está será indicado por um asterisco. Supondo que você esteja no branch minha_branch, vamos fazer uma cópia dela:
+- O branch no qual você está será indicado por um asterisco. Supondo que você esteja no branch minha_branch, vamos fazer uma cópia dela:
 
 `git checkout -b backup_minha_branch`
 >
-> Este comando cria um novo branch chamado backup_minha_branch que é uma cópia do branch atual minha_branch.
+- Este comando cria um novo branch chamado backup_minha_branch que é uma cópia do branch atual minha_branch.
 >
-> Passo 2: Atualizando a sua branch original
+- Passo 2: Atualizando a sua branch original
 > Agora, você deve voltar para a sua branch original e atualizá-la com as alterações da branch develop dando os comandos em sequência:
 
 1. `git checkout minha_branch`
@@ -65,41 +65,56 @@ git merge develop (sua branch)
 - `git checkout minha_branch`: muda para a branch minha_branch.
 - `git pull origin develop`: busca as atualizações do branch develop e integra com o branch minha_branch.
 
-> Passo 3: Subindo as alterações para a sua branch remota
+- Passo 3: Subindo as alterações para a sua branch remota
 
 - Agora que a sua branch `minha_branch` está atualizada, você pode subir as alterações para a branch remota.
 
 `git push origin minha_branch`
 
-> Passo 4: Fazendo um Merge Request (GitLab. Verificar algo parecido no Github):
+- Passo 4: Fazendo um Merge Request (GitLab. Verificar algo parecido no Github):
 - *** Para criar um Merge Request no GitLab, siga os passos abaixo:
 
-> a. Faça login na sua conta do GitLab e navegue até o projeto específico no qual você deseja criar um Merge Request.
+- a. Faça login na sua conta do GitLab e navegue até o projeto específico no qual você deseja criar um Merge Request.
 
-> b. No menu à esquerda, clique em "Merge Requests".
+- b. No menu à esquerda, clique em "Merge Requests":
 
-> c. Em seguida, clique no botão "New merge request".
+  ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/47debd43-5a6b-4b07-b462-d15c9afd2e87)
 
-> d. Agora você precisará selecionar o branch de origem (sua branch com as alterações) e o branch de destino (geralmente, a branch `main` ou 
+
+- c. Em seguida, clique no botão "New merge request".
+
+  ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/6bcb2086-5e9b-47bb-971c-8e196aac4440)
+
+
+- d. Agora você precisará selecionar o branch de origem (sua branch com as alterações) e o branch de destino (geralmente, a branch `main` ou 
 `develop`, dependendo do seu fluxo de trabalho).
 
-> e. No campo `Source branch`, escolha sua branch (a branch onde você fez as alterações).
+- e. No campo `Source branch`, escolha sua branch (a branch onde você fez as alterações).
 
-> f. No campo `Target branch`, escolha a branch para a qual deseja mesclar as alterações (geralmente, `main` ou `develop`).
+- f. No campo `Target branch`, escolha a branch para a qual deseja mesclar as alterações (geralmente, `main` ou `develop`).
 
-> g. Após selecionar os branches, clique em `Compare branches and continue`.
+ ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/2963f8b8-848b-4d39-b4d0-b960237c5ef1)
 
-> h. Na próxima página, forneça um título e uma descrição para o seu `Merge Request`. Isso deve incluir detalhes sobre as alterações que você fez.
 
-> i. Se você quiser que alguém específico revise seu Merge Request, você pode atribuí-lo a essa pessoa na seção `Assignees`.
+- g. Após selecionar os branches, clique em `Compare branches and continue`.
 
-> j. Se desejar, você também pode adicionar `rótulos` para ajudar a categorizar seu Merge Request na seção `Labels`.
+  ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/af0e8529-1032-49f9-8fe9-41db36e8069d)
 
-> k. Quando estiver satisfeito com todas as informações fornecidas, clique em `Submit merge request`.
 
-> l. E é isso! Agora você criou um Merge Request no GitLab. Lembre-se, uma vez que o Merge Request é criado, os revisores podem solicitar alterações antes de aprová-lo para ser mesclado. Você pode fazer essas alterações diretamente no branch de origem e elas serão automaticamente refletidas no Merge Request.
+- h. Na próxima página, forneça um título e uma descrição para o seu `Merge Request`. Isso deve incluir detalhes sobre as alterações que você fez.
 
-> m. O `Merge Request` é uma solicitação para mesclar seu branch de trabalho (`branch de origem`) com outro branch, normalmente a branch principal ou de desenvolvimento (`branch de destino`). Enquanto o Merge Request estiver aberto, qualquer commit adicional que você fizer no branch de origem será automaticamente refletido nesse Merge Request. Isso significa que, se os revisores pedirem alterações durante o processo de revisão do código, você pode fazer essas alterações diretamente no seu branch de origem. Após `commitar` e fazer `push` dessas alterações para o seu branch de origem, elas serão automaticamente atualizadas no Merge Request existente. Esses commits adicionais não serão refletidos no branch de destino (como `develop`) até que o Merge Request seja aprovado e o merge seja realizado. Em outras palavras, os commits adicionais não afetam o branch de destino até que o Merge Request seja concluído.
+- i. Se você quiser que alguém específico revise seu Merge Request, você pode atribuí-lo a essa pessoa na seção `Assignees`.
+
+- j. Se desejar, você também pode adicionar `rótulos` para ajudar a categorizar seu Merge Request na seção `Labels`.
+
+- k. Quando estiver satisfeito com todas as informações fornecidas, clique em `Create merge request`.
+
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/1fbc8e5a-5e25-4c13-9ea5-c4865c458ad0)
+
+
+- l. E é isso! Agora você criou um Merge Request no GitLab. Lembre-se, uma vez que o Merge Request é criado, os revisores podem solicitar alterações antes de aprová-lo para ser mesclado. Você pode fazer essas alterações diretamente no branch de origem e elas serão automaticamente refletidas no Merge Request.
+
+- m. O `Merge Request` é uma solicitação para mesclar seu branch de trabalho (`branch de origem`) com outro branch, normalmente a branch principal ou de desenvolvimento (`branch de destino`). Enquanto o Merge Request estiver aberto, qualquer commit adicional que você fizer no branch de origem será automaticamente refletido nesse Merge Request. Isso significa que, se os revisores pedirem alterações durante o processo de revisão do código, você pode fazer essas alterações diretamente no seu branch de origem. Após `commitar` e fazer `push` dessas alterações para o seu branch de origem, elas serão automaticamente atualizadas no Merge Request existente. Esses commits adicionais não serão refletidos no branch de destino (como `develop`) até que o Merge Request seja aprovado e o merge seja realizado. Em outras palavras, os commits adicionais não afetam o branch de destino até que o Merge Request seja concluído.
 
 - `WIP`: Work in Progress (WIP) em um Merge Request no GitLab para prevenir que o Merge Request seja mesclado antes de estar pronto. Isso é especialmente útil quando você ainda está trabalhando em uma `feature` ou quando espera feedback de outros.
 - 1. Na página do Merge Request, clique no botão "Edit" próximo ao título do Merge Request.
@@ -111,11 +126,11 @@ git merge develop (sua branch)
 - 4. Após fazer isso, o botão "Merge" ficará desabilitado no Merge Request e ninguém poderá mesclar as alterações até que você remova o "WIP: " ou "Draft: " do título.
 - 5. Para remover o status de `Work in Progress` e permitir a mesclagem:
 
-> a. Na página do `Merge Request`, clique no botão `"Edit"` próximo ao título do Merge Request.
+- a. Na página do `Merge Request`, clique no botão `"Edit"` próximo ao título do Merge Request.
+- 
+- b. Remova `"WIP: "` ou `"Draft: "` do início do título e clique em `"Save changes"`.
 > 
-> b. Remova `"WIP: "` ou `"Draft: "` do início do título e clique em `"Save changes"`.
-> 
-> c. Agora o botão `"Merge"` estará habilitado novamente e outros poderão mesclar suas alterações.
+- c. Agora o botão `"Merge"` estará habilitado novamente e outros poderão mesclar suas alterações.
 
 Lembre-se de que, mesmo quando um Merge Request está definido como Work in Progress, quaisquer novos commits que você fizer no branch de origem ainda serão refletidos nesse Merge Request. O status de Work in Progress apenas impede que o Merge Request seja mesclado prematuramente.
 
