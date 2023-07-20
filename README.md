@@ -234,12 +234,13 @@ git merge develop (sua branch)
 
 - f. No campo `Target branch`, escolha a branch para a qual deseja mesclar as alterações (geralmente, `main` ou `develop`).
 
- ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/2963f8b8-848b-4d39-b4d0-b960237c5ef1)
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/a234e794-0a72-48d4-be2f-686e7ad382a4)
 
 
 - g. Após selecionar os branches, clique em `Compare branches and continue`.
 
-  ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/af0e8529-1032-49f9-8fe9-41db36e8069d)
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/38fbdd2c-5ae1-4ff0-b289-1768855f3c09)
+
 
 
 - h. Na próxima página, forneça um título e uma descrição para o seu `Merge Request`. Isso deve incluir detalhes sobre as alterações que você fez.
