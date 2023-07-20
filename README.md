@@ -276,7 +276,10 @@ git merge develop (sua branch)
 
 Lembre-se de que, mesmo quando um Merge Request está definido como Work in Progress, quaisquer novos commits que você fizer no branch de origem ainda serão refletidos nesse Merge Request. O status de Work in Progress apenas impede que o Merge Request seja mesclado prematuramente.
 
-- Passo 5: Resolver conflitos de Merge e Pull (vale tanto para a parte gráfica do Intellij quanto para o Visual Studio Code): 
+- Passo 5: Resolver conflitos de Merge e Pull (vale tanto para a parte gráfica do Intellij quanto para o Visual Studio Code):
+
+  ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/2f043aa2-6641-46a3-bf57-2c6e4ee8ffca)
+
 
 - Exemplo de como o conflito é mostrado no código e de como resolver :
 
