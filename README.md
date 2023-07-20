@@ -276,7 +276,7 @@ git merge develop (sua branch)
 
 Lembre-se de que, mesmo quando um Merge Request está definido como Work in Progress, quaisquer novos commits que você fizer no branch de origem ainda serão refletidos nesse Merge Request. O status de Work in Progress apenas impede que o Merge Request seja mesclado prematuramente.
 
-> Passo 5: Resolver conflitos de Merge e Pull (vale tanto para a parte gráfica do Intellij quanto para o Visual Studio Code): 
+- Passo 5: Resolver conflitos de Merge e Pull (vale tanto para a parte gráfica do Intellij quanto para o Visual Studio Code): 
 
 - Exemplo de como o conflito é mostrado no código e de como resolver :
 
@@ -300,11 +300,17 @@ Lembre-se de que, mesmo quando um Merge Request está definido como Work in Prog
 
 - Depois de decidir qual código manter, remova as linhas de conflito `<<<<<<< HEAD`, `=======`, `>>>>>>> 725ae55a005d6146aa3a28cf48b54d4bc7b5f350` e salve o arquivo.
 
+- INTELLIJ:
 - Após salvar o arquivo, você precisa adicionar esse arquivo ao `Git` para indicar que o conflito foi resolvido ( arquivo de exemplo: `application-default.yml` ):
 - a. `git add src/main/resources/application-default.yml`
 - b. `git commit -m "Conflito resolvido em application-default.yml"`
+
+- VISUAL STUDIO CODE:
+
+-  Marque o conflito como resolvido: Após resolver o conflito e testar suas alterações, você precisará adicionar e commitar o arquivo. Isso pode ser feito através do painel de Source Control (Controlador de Fonte). Primeiro, clique no sinal de '+' ao lado do arquivo para adicioná-lo ao próximo commit. Em seguida, digite uma mensagem de commit e pressione 'Ctrl+Enter' para commitar. Repita esses passos para cada arquivo com conflito. Quando todos os conflitos tiverem sido resolvidos e commitados, você poderá concluir o merge.
   
 
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/311852cd-773c-45fa-8613-6f40fb21f374)
 
 
 
