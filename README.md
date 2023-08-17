@@ -157,7 +157,7 @@ Ajustes-DoServiçoDaApiPosAlteracoes
 
 ## Usando o Gitlab:
 
-#### I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
+## I - Merge Into ( enviar as alterações que eu fiz, "da minha" branch, "na" outra branch)
 
 ***** Interessante fazer um backup antes(tem que estar na branch a qual vai fazer o backup): `git checkout -b backup_minha_branch`
 
@@ -181,7 +181,7 @@ b. merge:
 git merge develop (sua branch)
 ````
 
-#### II - Backup, Pull e Merge Request de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
+## II - Backup, Pull e Merge Request de Outra Branch ( bom verificar antes de fazer um merge onto. Porque elimina a possibilidade de se fazer um merge desnecessário ):
 
 - Passo 1: Backup da sua branch atual:
 >
@@ -318,7 +318,7 @@ Lembre-se de que, mesmo quando um Merge Request está definido como Work in Prog
 
 
 
-#### III - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
+## III - Merge Onto ( aceitar as alterações "da outra" branch, "no" que fiz, sobrescrevendo ou não a minha branch dependendo do conflito, se tiver, claro )
 
 ***** Interessante fazer um backup antes(tem que estar na branch a qual vai fazer o backup):`git checkout -b backup_minha_branch`
 
