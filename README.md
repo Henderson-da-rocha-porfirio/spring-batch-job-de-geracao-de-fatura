@@ -191,7 +191,7 @@ git merge develop (sua branch)
 > 
 - O branch no qual você está será indicado por um asterisco. Supondo que você esteja no branch minha_branch, vamos fazer uma cópia dela:
 
-`git checkout -b backup_minha_branch`
+`git checkout -b backup_minha_branch` (pelo intellij, GIT(rodapé ou no superior) -> clicar com o direitor sobre a branch que deseja fazer o clone e colocar backup_minha_branch
 >
 - Este comando cria um novo branch chamado backup_minha_branch que é uma cópia do branch atual minha_branch.
 >
