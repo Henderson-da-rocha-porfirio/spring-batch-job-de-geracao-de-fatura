@@ -200,6 +200,16 @@ git merge develop (sua branch)
 
 1. `git checkout minha_branch`
 2. `git pull origin develop`
+3. Intellij:
+
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/fcef00d9-5947-440f-802b-973fc2a230f2)
+---
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/543d2072-bfd2-441e-beb9-4f3c0a2c514b)
+---
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/b5c45c41-a98a-4f2c-94d5-0cb6c0bf9122)
+
+
+
 
 - Estes comandos fazem o seguinte:
 
