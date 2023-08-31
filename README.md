@@ -206,7 +206,8 @@ git merge develop (sua branch)
 ---
 ![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/543d2072-bfd2-441e-beb9-4f3c0a2c514b)
 ---
-![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/b5c45c41-a98a-4f2c-94d5-0cb6c0bf9122)
+![image](https://github.com/Henderson-da-rocha-porfirio/spring-batch-job-de-geracao-de-fatura/assets/46926951/b9d61286-b34c-4c7c-8c49-012a7e5b3020)
+
 
 
 
